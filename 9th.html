@@ -1,0 +1,29 @@
+
+<html xmlns="https://www.w3.org/1999/xhtml">
+    <head>
+        <title>Usn.html</title>
+        <script type="text/javascript">
+            function check_usn() {
+                var str = document.getElementById("USN").value;
+                var pattern = /^[1-4]{1}[A-Z]{2}\d{2}[A-Z]{2}\d{3}$/;
+                if (!pattern.test(str)) {
+                    alert("Entered USN (" + str + ") is not in the correct form.\n" + "The correct form is: 1CG21CS067.\n" + "Please go back and retype your USN.");
+                } else {
+                    alert("Entered USN (" + str + ") is in the correct form.");
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: yellow;">
+        <h3 style="text-align:center;color:red">Program includes XHTML document to collect student information</h3>
+        <h3 style="color:purple;">Student Information</h3>
+        <form name="Myform">
+            <p style="color: purple;">Enter your USN:</p>
+            <input type="text" id="USN" size="15"/>
+            <br/><br/>
+            <input type="button" onclick="check_usn()" value="Submit"/>
+            <input type="reset" value="Reset"/>
+            <br/>
+        </form>
+    </body>
+</html>

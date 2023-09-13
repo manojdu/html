@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            class CompanyName {
+                constructor() {
+                    this.Company = "CIT gubbi";
+                }
+            }
+
+            class Employee extends CompanyName {
+                constructor(id, name) {
+                    super();
+                    this.id = id;
+                    this.Name = name;
+                }
+            }
+
+            var emp = new Employee(1, "John");
+            document.writeln(emp.id + " " + emp.Name + " " + emp.Company);
+        </script>
+    </body>
+</html>
